@@ -61,25 +61,25 @@ var makeHobbits = function(){
 	var hobbitsList = document.createElement("ul");
 
 	var frodo = document.createElement('li');
-	frodo.class= "hobbit";
+	frodo.className= "hobbit";
 	var frodotext = document.createTextNode(hobbits[0]);
 	frodo.appendChild(frodotext);
 	hobbitsList.appendChild(frodo);
 
 	var sam = document.createElement("li");
-	sam.class = "hobbit";
+	sam.className = "hobbit";
 	var samtext = document.createTextNode(hobbits[1]);
 	sam.appendChild(samtext);
 	hobbitsList.appendChild(sam);
 
 	var merry = document.createElement("li");
-	merry.class = "hobbit";
+	merry.className = "hobbit";
 	var merrytext = document.createTextNode(hobbits[2]);
 	merry.appendChild(merrytext);
 	hobbitsList.appendChild(merry);
 
 	var pip = document.createElement("li");
-	pip.class= "hobbit";
+	pip.className= "hobbit";
 	var piptext = document.createTextNode(hobbits[3]);
 	pip.appendChild(piptext);
 	hobbitsList.appendChild(pip);
@@ -89,6 +89,18 @@ var makeHobbits = function(){
 }
 
 makeHobbits();
+
+//Part 3
+var keepItSecretKeepItSafe = function (){
+
+	var ring = document.createElement("div");
+	ring.id = "the-ring";
+	ring.className = "magic-imbued-jewelry";
+	var frodo = document.getElementsByTagName("li")[0];
+	frodo.appendChild(ring);
+}
+
+keepItSecretKeepItSafe();
 
 
 
