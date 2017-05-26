@@ -102,6 +102,45 @@ var keepItSecretKeepItSafe = function (){
 
 keepItSecretKeepItSafe();
 
+//Part 4
+var makeBuddies = function (){
+
+	var buddiesAside = document.createElement("aside");
+	var buddiesList = document.createElement("ul");
+
+	var gandalf = document.createElement("li");
+	var gandalfText = document.createTextNode(buddies[0]);
+	gandalf.appendChild(gandalfText);
+	buddiesList.appendChild(gandalf);
+
+	var legolas = document.createElement("li");
+	var legolasText = document.createTextNode(buddies[1]);
+	legolas.appendChild(legolasText);
+	buddiesList.appendChild(legolas);
+
+	var gimli = document.createElement("li");
+	var gimliText = document.createTextNode(buddies[2]);
+	gimli.appendChild(gimliText);
+	buddiesList.appendChild(gimli);
+	
+	var strider = document.createElement("li");
+	var striderText = document.createTextNode(buddies[3]);
+	strider.appendChild(striderText);
+	buddiesList.appendChild(strider);	
+
+	var boromir = document.createElement("li");
+	var boromirText = document.createTextNode(buddies[4]);
+	boromir.appendChild(boromirText);
+	buddiesList.appendChild(boromir);
+
+	buddiesAside.appendChild(buddiesList);
+
+	var riven = document.getElementsByTagName("article")[1];
+	riven.appendChild(buddiesAside);
+}
+makeBuddies();
+
+//Part 5
 
 
 
