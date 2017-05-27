@@ -141,8 +141,18 @@ var makeBuddies = function (){
 makeBuddies();
 
 //Part 5
+var beautifulStranger = function () {
+	buddies[3] = "Aragorn";
+	var getStrider = document.querySelectorAll("aside ul li")[3];
+	getStrider.remove();
+	getBuddiesList = document.getElementsByTagName("ul")[1];
+	var Aragorn = document.createElement("li");
+	var Aragorntext = document.createTextNode(buddies[3]);
+	Aragorn.appendChild(Aragorntext);
+	getBuddiesList.appendChild(Aragorn);
 
-
+}
+beautifulStranger();
 
 
 
