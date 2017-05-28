@@ -106,66 +106,16 @@ var beautifulStranger = function () {
 beautifulStranger();
 
 // // Part 6
-// var leaveTheShire = function (){
+var leaveTheShire = function (){
 
-// // //document.getElementById('wrapperA').appendChild(document.getElementById('superWidget'));
-// // //deleting the list from The Shire	
-// var removeFromShire = document.getElementsByTagName("ul")[0];
-// removeFromShire.remove();	
+	var newParent = document.getElementsByTagName("ul")[1];//gets the Rivendell list of characters
+	var oldParent = document.getElementsByTagName("ul")[0];//gets the hobbit list
 
-// var makeHobbits = function(){
-
-// 	var hobbitsList = document.createElement("ul");
-
-// 	var frodo = document.createElement('li');
-// 	frodo.className= "hobbit";
-// 	var frodotext = document.createTextNode(hobbits[0]);
-// 	frodo.appendChild(frodotext);
-// 	hobbitsList.appendChild(frodo);
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	riven.appendChild(hobbitsList);
-
-
-// 	var sam = document.createElement("li");
-// 	sam.className = "hobbit";
-// 	var samtext = document.createTextNode(hobbits[1]);
-// 	sam.appendChild(samtext);
-// 	hobbitsList.appendChild(sam);
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	riven.appendChild(hobbitsList);
-
-// 	var merry = document.createElement("li");
-// 	merry.className = "hobbit";
-// 	var merrytext = document.createTextNode(hobbits[2]);
-// 	merry.appendChild(merrytext);
-// 	hobbitsList.appendChild(merry);
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	riven.appendChild(hobbitsList);
-
-// 	var pip = document.createElement("li");
-// 	pip.className= "hobbit";
-// 	var piptext = document.createTextNode(hobbits[3]);
-// 	pip.appendChild(piptext);
-// 	hobbitsList.appendChild(pip);
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	riven.appendChild(hobbitsList);	
-// 	}
-
-// 		makeHobbits();
-
-// 	var keepItSecretKeepItSafe = function (){
-
-// 	var ring = document.createElement("div");
-// 	ring.id = "the-ring";
-// 	ring.className = "magic-imbued-jewelry";
-// 	var frodo = document.getElementsByTagName("li")[5];
-// 	frodo.appendChild(ring);
-// }
-
-// keepItSecretKeepItSafe();
-
-// }
-// leaveTheShire();
+	while (oldParent.childNodes.length > 0) {//iterates throught the hobbit list
+	newParent.appendChild(oldParent.childNodes[0]);//appends each li to the Rivendell list
+	}
+}
+leaveTheShire();
 
 //Part 7
 
