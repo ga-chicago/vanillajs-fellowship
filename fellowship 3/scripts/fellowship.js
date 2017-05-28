@@ -56,39 +56,25 @@ body.appendChild(middleEarth);
 makeMiddleEarth();
 
 //Part 2
-var makeHobbits = function(){
 
-	var hobbitsList = document.createElement("ul");
+var makeHobbits = function(elName){
 
-	var frodo = document.createElement('li');
-	frodo.className= "hobbit";
-	var frodotext = document.createTextNode(hobbits[0]);
-	frodo.appendChild(frodotext);
-	hobbitsList.appendChild(frodo);
+    var hobbitsList = document.createElement("ul");
 
-	var sam = document.createElement("li");
-	sam.className = "hobbit";
-	var samtext = document.createTextNode(hobbits[1]);
-	sam.appendChild(samtext);
-	hobbitsList.appendChild(sam);
+        for (var i = 0; i < hobbits.length; i++) {
+            var el = document.createElement(elName);
+            el.className = "hobbit";
+            var text = hobbits[i];
+            var elText = document.createTextNode(text);
+            el.appendChild(elText);
+            hobbitsList.appendChild(el);
+            }
 
-	var merry = document.createElement("li");
-	merry.className = "hobbit";
-	var merrytext = document.createTextNode(hobbits[2]);
-	merry.appendChild(merrytext);
-	hobbitsList.appendChild(merry);
-
-	var pip = document.createElement("li");
-	pip.className= "hobbit";
-	var piptext = document.createTextNode(hobbits[3]);
-	pip.appendChild(piptext);
-	hobbitsList.appendChild(pip);
-
-	var list = document.getElementsByTagName("article")[0];
-	list.appendChild(hobbitsList);
+        var list = document.getElementsByTagName("article")[0];
+        list.append(hobbitsList);
 }
+makeHobbits("li");
 
-makeHobbits();
 
 //Part 3
 var keepItSecretKeepItSafe = function (){
@@ -154,7 +140,7 @@ var beautifulStranger = function () {
 }
 beautifulStranger();
 
-//Part 6
+// Part 6
 var leaveTheShire = function (){
 
 // //document.getElementById('wrapperA').appendChild(document.getElementById('superWidget'));
@@ -217,5 +203,37 @@ keepItSecretKeepItSafe();
 leaveTheShire();
 
 //Part 7
+
+// var forgeTheFellowship = function(){
+
+// 	var riven = document.getElementsByTagName("article")[1];
+// 	var fellow = document.createElement("div");
+// 	riven.appendChild(fellow);
+
+
+// 	var getEverybody = document.querySelectorAll("ul");
+// 	var fellowDiv = document.querySelectorAll("div")[2];
+// 	fellowDiv.appendChild(getEverybody);
+// }
+// forgeTheFellowship();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
