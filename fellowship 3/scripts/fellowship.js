@@ -98,19 +98,12 @@ var makeBuddies = function (elName){
 }
 makeBuddies("li");//calls the function and passes li into the arguement
 
-// //Part 5
-// var beautifulStranger = function () {
-// 	buddies[3] = "Aragorn";
-// 	var getStrider = document.querySelectorAll("aside ul li")[3];
-// 	getStrider.remove();
-// 	getBuddiesList = document.getElementsByTagName("ul")[1];
-// 	var Aragorn = document.createElement("li");
-// 	var Aragorntext = document.createTextNode(buddies[3]);
-// 	Aragorn.appendChild(Aragorntext);
-// 	getBuddiesList.appendChild(Aragorn);
-
-// }
-// beautifulStranger();
+//Part 5
+var beautifulStranger = function () {
+	buddies[3] = "Aragorn";
+	document.querySelectorAll("aside ul li")[3].textContent=buddies[3];
+}
+beautifulStranger();
 
 // // Part 6
 // var leaveTheShire = function (){
