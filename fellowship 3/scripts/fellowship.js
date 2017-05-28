@@ -23,96 +23,80 @@ var body = document.body;
 //Part 1
 var makeMiddleEarth = function(el1, el2){
 
-var middleEarth = document.createElement("section");
-middleEarth.id = "middle-earth";
+var middleEarth = document.createElement("section");//creates a section
+middleEarth.id = "middle-earth";//gives the section an id
 
-for (var i = 0; i < lands.length; i++) {
-	var articleElem = document.createElement(el1);
-	var h1Elem = document.createElement(el2);
-	var text = lands[i];
-	var h1Text = document.createTextNode(text);
-	h1Elem.appendChild(h1Text);
-	articleElem.appendChild(h1Elem);
-	middleEarth.appendChild(articleElem);
+for (var i = 0; i < lands.length; i++) {//iterates through land object
+	var articleElem = document.createElement(el1); //creates article
+	var h1Elem = document.createElement(el2); //creates h1 tag
+	var text = lands[i];//grabs land nams
+	var h1Text = document.createTextNode(text);// creates a text node with land name as content
+	h1Elem.appendChild(h1Text);//puts the text node in the h1 element
+	articleElem.appendChild(h1Elem);//puts the h1 element in the article element
+	middleEarth.appendChild(articleElem);//puts the article element in the section
 	}
 
-	body.appendChild(middleEarth);
+	body.appendChild(middleEarth);//puts the section in the body
 
 };
 
-makeMiddleEarth("article", "h1");
+makeMiddleEarth("article", "h1");//pass article and h1 into the function arguments
 
 
 //Part 2
 
 var makeHobbits = function(elName){
 
-    var hobbitsList = document.createElement("ul");
+    var hobbitsList = document.createElement("ul");//creates a unordered list
 
-        for (var i = 0; i < hobbits.length; i++) {
-            var el = document.createElement(elName);
-            el.className = "hobbit";
-            var text = hobbits[i];
-            var elText = document.createTextNode(text);
-            el.appendChild(elText);
-            hobbitsList.appendChild(el);
+        for (var i = 0; i < hobbits.length; i++) {//iterates through the hobbit object
+            var el = document.createElement(elName);//creates the list element
+            el.className = "hobbit";//give a class name to each element
+            var text = hobbits[i];//gets the names from the hobbit object
+            var elText = document.createTextNode(text);//creates a text node with the hobbit name inside
+            el.appendChild(elText);//puts the text node in the list element
+            hobbitsList.appendChild(el);//puts the list element in the UL tag
             }
 
-        var list = document.getElementsByTagName("article")[0];
-        list.append(hobbitsList);
+        var list = document.getElementsByTagName("article")[0];// gets The Shire article
+        list.append(hobbitsList);//but the hobbit list in the The Shire article
 }
-makeHobbits("li");
+makeHobbits("li");//passes list into the function argument
 
 
-//Part 3
-// var keepItSecretKeepItSafe = function (){
+// Part 3
+var keepItSecretKeepItSafe = function (){
 
-// 	var ring = document.createElement("div");
-// 	ring.id = "the-ring";
-// 	ring.className = "magic-imbued-jewelry";
-// 	var frodo = document.getElementsByTagName("li")[0];
-// 	frodo.appendChild(ring);
-// }
+	var ring = document.createElement("div");//creates a div
+	ring.id = "the-ring";//gives the dic and id
+	ring.className = "magic-imbued-jewelry";//gives the div a class
+	var frodo = document.getElementsByTagName("li")[0];//gets the Frodo li element
+	frodo.appendChild(ring);//puts the ring div into the Frodo li element
+}
 
-// keepItSecretKeepItSafe();
+keepItSecretKeepItSafe();
 
 // //Part 4
-// var makeBuddies = function (){
+var makeBuddies = function (elName){
 
-// 	var buddiesAside = document.createElement("aside");
-// 	var buddiesList = document.createElement("ul");
+	var buddiesAside = document.createElement("aside");//creates an aside
+	var buddiesList = document.createElement("ul");//creates an unordered list
 
-// 	var gandalf = document.createElement("li");
-// 	var gandalfText = document.createTextNode(buddies[0]);
-// 	gandalf.appendChild(gandalfText);
-// 	buddiesList.appendChild(gandalf);
+	for (var i = 0; i < buddies.length; i++) {//itereates through the buddies object
 
-// 	var legolas = document.createElement("li");
-// 	var legolasText = document.createTextNode(buddies[1]);
-// 	legolas.appendChild(legolasText);
-// 	buddiesList.appendChild(legolas);
+		var el = document.createElement(elName);//creates a li element
+		var text = buddies[i];//gets the names of each buddy
+		var elText = document.createTextNode(text);//creates a text node with the buddy name
+		el.appendChild(elText);//put the text node into the li element
+		buddiesList.appendChild(el);//puts the li element into the ul element
+	}
 
-// 	var gimli = document.createElement("li");
-// 	var gimliText = document.createTextNode(buddies[2]);
-// 	gimli.appendChild(gimliText);
-// 	buddiesList.appendChild(gimli);
-	
-// 	var strider = document.createElement("li");
-// 	var striderText = document.createTextNode(buddies[3]);
-// 	strider.appendChild(striderText);
-// 	buddiesList.appendChild(strider);	
+	buddiesAside.appendChild(buddiesList);//puts the ul element into the aside element
 
-// 	var boromir = document.createElement("li");
-// 	var boromirText = document.createTextNode(buddies[4]);
-// 	boromir.appendChild(boromirText);
-// 	buddiesList.appendChild(boromir);
-
-// 	buddiesAside.appendChild(buddiesList);
-
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	riven.appendChild(buddiesAside);
-// }
-// makeBuddies();
+	var riven = document.getElementsByTagName("article")[1];//gets the Rivendell article element
+	riven.appendChild(buddiesAside);//buts the aside element into the Rivendell article element
+}
+makeBuddies("li");//calls the function and passes li into the arguement
 
 // //Part 5
 // var beautifulStranger = function () {
