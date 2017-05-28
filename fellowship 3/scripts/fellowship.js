@@ -21,43 +21,73 @@ var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.body;
 //#### Part 1
 var makeMiddleEarth = function () {
-    //make section tag
     var sectionTag = document.createElement('section')
-    //attach section tag to body
     body.appendChild(sectionTag)
-    //make section tag id='middle-earth'
     sectionTag.setAttribute('id', 'middle-earth')
-    //loop for make articles with h1's for all the lands
     for (var i = 0; i < lands.length; i++) {
-        //make article element
         var articleTag = document.createElement('article')
-        //attach article element to section element
         sectionTag.appendChild(articleTag)
-        //make h1 element
         var h1 = document.createElement('h1')
-        //place h1's in articles
         articleTag.appendChild(h1)
-        //add list strings to h1's
         h1.innerHTML = lands[i]
     }
 }
 makeMiddleEarth();
 //#### Part 2
 var makeHobbits = function () {
-    //grab article element
     var articleElement2 = document.getElementsByTagName('article')[1]
-    //make ul element
-    var hobbitUL = document.createElement('ul')
-    //attach ul to article element
-    articleElement2.appendChild(hobbitUL)
-    //make li for each hobbit
+    var hobbitUl = document.createElement('ul')
+    articleElement2.appendChild(hobbitUl)
     for (var i = 0; i < hobbits.length; i++) {
-        //for each hobbit, make an 'li'
         var hobbitPerson = document.createElement('li')
-        //append said "li's" to 'ul' element created
-        //above, in the variable 'hobbitUL'
-        hobbitUL.appendChild(hobbitPerson)
-        //place hobbits from list as HTML inside "li's"
+        hobbitUl.appendChild(hobbitPerson)
         hobbitPerson.innerHTML = hobbits[i]
 }}
 makeHobbits();
+//#### Part 3
+var keepItSecretKeepItSafe = function () {
+    var ringDiv = document.createElement('div')
+    document.getElementsByTagName('div')[1]
+    body.appendChild(ringDiv)
+    ringDiv.setAttribute('id', 'the-ring')
+    ringDiv.setAttribute('class', 'magic-imbued-jewelry')
+    var grabFrodo = document.getElementsByTagName('li')[0]
+    ringDiv.appendChild(grabFrodo)
+};
+keepItSecretKeepItSafe();
+//global function test
+//for addition once the whole product is working
+var addCrew = function (home, group, tag) {
+    for (var i = 0; i < group.length; i++) {
+        var makeTag = document.createElement(tag)
+        home.appendChild(tag)
+        tag.innerHTML = group[i]
+    }
+}
+//#### Part 4
+var makeBuddies = function () {
+    var makeAside = document.createElement('aside')
+    var grabArticleRiven = document.getElementsByTagName('article')[1]
+    grabArticleRiven.appendChild(makeAside)
+    var buddiesUl = document.createElement('ul')
+    var grabAside = document.getElementsByTagName('aside')[0]
+    document.getElementsByTagName('ul')[1]
+    grabAside.appendChild(buddiesUl)
+    for (var i = 0; i < buddies.length; i++) {
+        var buddyLi = document.createElement('li')
+        buddiesUl.appendChild(buddyLi)
+        buddyLi.innerHTML = buddies[i]
+    }
+}
+makeBuddies();
+//#### Part 5
+var beautifulStranger = function () {
+    //buddies[3] = "Aragorn" (why doesn't this work?)
+    var aliasStrider = document.getElementsByTagName('li')[6]
+    aliasStrider.innerHTML = "Aragorn"
+}
+beautifulStranger();
+//#### Part 6
+var leaveTheShire = function () {
+    var assembleHobbits = document.getElementsByTagName('ul')[0]
+}
