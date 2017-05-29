@@ -155,9 +155,10 @@ var weWantsIt = function () {
     //imprecise?
     gollumDiv.setAttribute('id', 'gollum')
     mordorArticle.appendChild(gollumDiv)
-    var ring = document.getElementsById('the-ring')
+    var ring = document.getElementsByTagName('div')[4]
     var mordorUl = document.getElementsByTagName('ul')[3]
     var pickRingFrodo = document.getElementsByTagName('li')[16]
     ring.removeChild(pickRingFrodo)
+    ring.appendChild(gollumDiv)
 };
 weWantsIt();
