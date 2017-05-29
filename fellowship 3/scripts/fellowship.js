@@ -100,8 +100,8 @@ makeBuddies("li");//calls the function and passes li into the arguement
 
 //Part 5
 var beautifulStranger = function () {
-	buddies[3] = "Aragorn";
-	document.querySelectorAll("aside ul li")[3].textContent=buddies[3];
+	buddies[3] = "Aragorn";  //Changes Striders name in the array to Aragorn
+	document.querySelectorAll("aside ul li")[3].textContent=buddies[3];//changes the text content for the 4th property to Aragorn
 }
 beautifulStranger();
 
@@ -114,23 +114,32 @@ var leaveTheShire = function (){
 	while (oldParent.childNodes.length > 0) {//iterates throught the hobbit list
 	newParent.appendChild(oldParent.childNodes[0]);//appends each li to the Rivendell list
 	}
+
 }
 leaveTheShire();
 
 //Part 7
 
-// var forgeTheFellowship = function(){
+var forgeTheFellowship = function(){
 
-// 	var riven = document.getElementsByTagName("article")[1];
-// 	var fellow = document.createElement("div");
-// 	riven.appendChild(fellow);
+	var riven = document.getElementsByTagName("article")[1];//gets the rivendell article element
+	var fellow = document.createElement("div");//creates a new div
+	riven.appendChild(fellow);//appends the div to Rivendell  article
+
+	var oldParent = document.getElementsByTagName("ul")[1];//gets the element where all the characters are currently
 
 
-// 	var getEverybody = document.querySelectorAll("ul");
-// 	var fellowDiv = document.querySelectorAll("div")[2];
-// 	fellowDiv.appendChild(getEverybody);
-// }
-// forgeTheFellowship();
+	for (var i = 0; i <= oldParent.childNodes.length;) { //loops through the ul where the characters are.  you don't do "i++" because you are removing something from the array everytime, so you always just want the first one.
+
+
+		var names = document.getElementsByTagName("li")[0].textContent; // holds the text of the names for each character
+
+		fellow.appendChild(oldParent.childNodes[i]);//add each element to the new div created above
+
+		alert(names + " has joined the fellowship!");// shows an alert that each character has joined.
+	}
+}
+forgeTheFellowship();
 
 
 
