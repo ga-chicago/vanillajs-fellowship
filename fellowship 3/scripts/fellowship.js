@@ -124,12 +124,17 @@ var forgeTheFellowship = function(){
 
 	var riven = document.getElementsByTagName("article")[1];//gets the rivendell article element
 	var fellow = document.createElement("div");//creates a new div
+	var h2 = document.createElement("h2");
+	var text = "The-Fellowship";
+	var textNode = document.createTextNode(text);
+	h2.appendChild(textNode)
+	fellow.appendChild(h2);
 	riven.appendChild(fellow);//appends the div to Rivendell  article
 
 	var oldParent = document.getElementsByTagName("ul")[1];//gets the element where all the characters are currently
 
 
-	for (var i = 0; i <= oldParent.childNodes.length;) { //loops through the ul where the characters are.  you don't do "i++" because you are removing something from the array everytime, so you always just want the first one.
+	for (var i = 0; i < oldParent.childNodes.length;) { //loops through the ul where the characters are.  you don't do "i++" because you are removing something from the array everytime, so you always just want the first one.
 
 
 		var names = document.getElementsByTagName("li")[0].textContent; // holds the text of the names for each character
@@ -140,6 +145,28 @@ var forgeTheFellowship = function(){
 	}
 }
 forgeTheFellowship();
+
+//Part 8
+
+var theBalrog = function (){
+var gandalf = "Gandalf the White"//set variable with text I want to update to
+document.querySelectorAll("li")[0].innerHTML = gandalf;//selects the Gandalf li and sets the text equal to the variable
+
+document.querySelectorAll("li")[0].style.cssText = "background-color: white; border: 40px grey";
+
+}
+theBalrog ();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
