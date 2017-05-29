@@ -19,6 +19,7 @@ var buddies = [
 
 var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.body;
+
 //#### Part 1
 var makeMiddleEarth = function () {
     var sectionTag = document.createElement('section')
@@ -31,7 +32,7 @@ var makeMiddleEarth = function () {
         articleTag.appendChild(h1)
         h1.innerHTML = lands[i]
     }
-}
+};
 makeMiddleEarth();
 //#### Part 2
 var makeHobbits = function () {
@@ -42,7 +43,7 @@ var makeHobbits = function () {
         var hobbitPerson = document.createElement('li')
         hobbitUl.appendChild(hobbitPerson)
         hobbitPerson.innerHTML = hobbits[i]
-}}
+}};
 makeHobbits();
 //#### Part 3
 var keepItSecretKeepItSafe = function () {
@@ -63,7 +64,7 @@ var addCrew = function (home, group, tag) {
         home.appendChild(tag)
         tag.innerHTML = group[i]
     }
-}
+};
 //#### Part 4
 var makeBuddies = function () {
     var makeAside = document.createElement('aside')
@@ -78,7 +79,7 @@ var makeBuddies = function () {
         buddiesUl.appendChild(buddyLi)
         buddyLi.innerHTML = buddies[i]
     }
-}
+};
 makeBuddies();
 //#### Part 5
 var beautifulStranger = function () {
@@ -89,5 +90,33 @@ var beautifulStranger = function () {
 beautifulStranger();
 //#### Part 6
 var leaveTheShire = function () {
-    var assembleHobbits = document.getElementsByTagName('ul')[0]
-}
+    var assembleHobbits = document.getElementsByTagName('article')[1].appendChild(document.getElementsByTagName('ul')[0])
+};
+leaveTheShire();
+//#### Part 7
+var forgeTheFellowship = function () {
+    var fellowshipDiv = document.createElement('div')
+    var rivenArticle = document.getElementsByTagName('article')[1]
+    rivenArticle.appendChild(fellowshipDiv)
+    var fellowshipUl = document.createElement('ul')
+    fellowshipDiv.appendChild(fellowshipUl)
+    for (var i = 0; i < hobbits.length; i++) {
+        var fellowshipLi = document.createElement('li')
+        fellowshipUl.appendChild(fellowshipLi)
+        fellowshipLi.innerHTML = hobbits[i]
+        console.log(hobbits[i] + " has joined your party.")
+    }
+    for (var i = 0; i < buddies.length; i++) {
+        var fellowshipLi = document.createElement('li')
+        fellowshipUl.appendChild(fellowshipLi)
+        fellowshipLi.innerHTML = buddies[i]
+        console.log(buddies[i] + " has joined your party.")
+    }
+};
+forgeTheFellowship();
+//#### Part 8
+var theBalrog = function () {
+    var gandalf = document.getElementsByTagName('li')[12]
+    gandalf.innerHTML = "Gandalf the White"
+};
+theBalrog();
