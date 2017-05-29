@@ -160,5 +160,6 @@ var weWantsIt = function () {
     var pickRingFrodo = document.getElementsByTagName('li')[16]
     ring.removeChild(pickRingFrodo)
     ring.appendChild(gollumDiv)
+    mordorUl.appendChild(gollumDiv)
 };
 weWantsIt();
