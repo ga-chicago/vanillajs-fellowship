@@ -161,14 +161,30 @@ theBalrog ();
 
 var hornOfGondor = function() {
 
-alert("The horn of Gondor has been blown!")
+alert("The horn of Gondor has been blown!")//creats alert
 
-var boromir = document.getElementsByTagName("li")[4];
-boromir.remove();
+var boromir = document.getElementsByTagName("li")[4];//variable to get boromir element
+boromir.remove();//removes boromir
 
 }
 hornOfGondor();
 
+// Part 10
+
+var itsDangerousToGoAlone = function (){
+
+	var newParent = document.getElementsByTagName("article")[2];//gets the Mordor element
+	var getFrodo = document.getElementsByTagName("li")[4];//gets frodo element
+	var getSam = document.getElementsByTagName("li")[5];//gets sam element
+
+	newParent.appendChild(getFrodo);//appends frodo to mordor
+	newParent.appendChild(getSam);//appends sam to mordor
+	
+	var doomDiv = document.createElement("div");//creates doom div
+	doomDiv.id = "mount-doom"//gives id to doom div
+	newParent.appendChild(doomDiv);//appends doom div to mordor
+}
+itsDangerousToGoAlone ();
 
 
 
