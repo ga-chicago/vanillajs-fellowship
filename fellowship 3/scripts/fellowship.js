@@ -98,6 +98,7 @@ var forgeTheFellowship = function () {
     var fellowshipDiv = document.createElement('div')
     var rivenArticle = document.getElementsByTagName('article')[1]
     rivenArticle.appendChild(fellowshipDiv)
+    fellowshipDiv.setAttribute('id', 'the-fellowship')
     var fellowshipUl = document.createElement('ul')
     fellowshipDiv.appendChild(fellowshipUl)
     for (var i = 0; i < hobbits.length; i++) {
@@ -118,5 +119,45 @@ forgeTheFellowship();
 var theBalrog = function () {
     var gandalf = document.getElementsByTagName('li')[12]
     gandalf.innerHTML = "Gandalf the White"
+    //stil have to make white background, grey border
 };
 theBalrog();
+//#### Part 9
+var hornOfGondor = function () {
+    console.log("The horn of Gondor has been blown. Boromir's been killed by the Urak-hai!")
+    var fellowshipUl = document.getElementsByTagName('ul')[2]
+    // var boromirLi = document.getElementsByTagName('li')[16]
+    fellowshipUl.removeChild(document.getElementsByTagName('li')[16])
+};
+hornOfGondor();
+//#### Part 10
+var itsDangerousToGoAlone = function () {
+    var fellowshipUl = document.getElementsByTagName('ul')[2]
+    var mordorArticle = document.getElementsByTagName('article')[2]
+    var pickSam = fellowshipUl.getElementsByTagName('li')[1]
+    var pickFrodo = fellowshipUl.getElementsByTagName('li')[0]
+    fellowshipUl.removeChild(pickSam)
+    fellowshipUl.removeChild(pickFrodo)
+    var mordorUl = document.createElement('ul')
+    mordorArticle.appendChild(mordorUl)
+    mordorUl.appendChild(pickSam)
+    mordorUl.appendChild(pickFrodo)
+
+    var mountDoom = document.createElement('div')
+    mordorArticle.appendChild(mountDoom)
+    mountDoom.setAttribute('id', 'mount-doom')
+};
+itsDangerousToGoAlone();
+//#### Part 11
+var weWantsIt = function () {
+    var mordorArticle = document.getElementsByTagName('article')[2]
+    var gollumDiv = document.createElement('div')
+    //imprecise?
+    gollumDiv.setAttribute('id', 'gollum')
+    mordorArticle.appendChild(gollumDiv)
+    var ring = document.getElementsById('the-ring')
+    var mordorUl = document.getElementsByTagName('ul')[3]
+    var pickRingFrodo = document.getElementsByTagName('li')[16]
+    ring.removeChild(pickRingFrodo)
+};
+weWantsIt();
