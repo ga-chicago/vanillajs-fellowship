@@ -159,7 +159,15 @@ var weWantsIt = function () {
     var mordorUl = document.getElementsByTagName('ul')[3]
     var pickRingFrodo = document.getElementsByTagName('li')[16]
     ring.removeChild(pickRingFrodo)
-    ring.appendChild(gollumDiv)
-    mordorUl.appendChild(gollumDiv)
+    gollumDiv.appendChild(ring)
+    var mountDoom = document.getElementsByTagName('div')[2]
+    mountDoom.appendChild(gollumDiv)
+};
+weWantsIt();
+//#### Part 12
+var thereAndBackAgain = function () {
+  var mordorArticle = document.getElementsByTagName('article')[2]
+  var mountDoom = document.getElementsByTagName('div')[2]
+  mordorArticle.removeChild(mountDoom)
 };
 weWantsIt();
