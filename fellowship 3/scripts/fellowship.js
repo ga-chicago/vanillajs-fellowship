@@ -170,7 +170,6 @@ boromir.remove();//removes boromir
 hornOfGondor();
 
 // Part 10
-
 var itsDangerousToGoAlone = function (){
 
 	var newParent = document.getElementsByTagName("article")[2];//gets the Mordor element
@@ -186,6 +185,22 @@ var itsDangerousToGoAlone = function (){
 }
 itsDangerousToGoAlone ();
 
+//Part 11
+var weWantsIt = function () {
+
+	var gollum = document.createElement("div");
+	gollum.id = "gollum";
+	var newParent = document.getElementsByTagName("article")[2];
+	newParent.appendChild(gollum);
+
+	var getRing = document.getElementById("the-ring");
+	gollum.appendChild(getRing);
+
+	var mountDoom = document.getElementById("mount-doom");
+	mountDoom.appendChild(gollum);
+
+}
+weWantsIt ();
 
 
 
