@@ -152,7 +152,7 @@ var theBalrog = function (){
 var gandalf = "Gandalf the White"//set variable with text I want to update to
 document.querySelectorAll("li")[0].innerHTML = gandalf;//selects the Gandalf li and sets the text equal to the variable
 
-document.querySelectorAll("li")[0].style.cssText = "background-color: white; border: 40px grey";//border isn't working
+document.querySelectorAll("li")[0].style.cssText = "background-color: white; border: 5px solid grey";
 
 }
 theBalrog ();
