@@ -188,23 +188,39 @@ itsDangerousToGoAlone ();
 //Part 11
 var weWantsIt = function () {
 
-	var gollum = document.createElement("div");
-	gollum.id = "gollum";
-	var newParent = document.getElementsByTagName("article")[2];
-	newParent.appendChild(gollum);
+	var gollum = document.createElement("div");//creates gollum div
+	gollum.id = "gollum";//add ID to gollum div
+	var newParent = document.getElementsByTagName("article")[2];//gets mordor article
+	newParent.appendChild(gollum);//outs gollum in mordor
 
-	var getRing = document.getElementById("the-ring");
-	gollum.appendChild(getRing);
+	var getRing = document.getElementById("the-ring");//gets the ring div
+	gollum.appendChild(getRing);//gives ring to gollyum
 
-	var mountDoom = document.getElementById("mount-doom");
-	mountDoom.appendChild(gollum);
+	var mountDoom = document.getElementById("mount-doom");//gets mount doom div
+	mountDoom.appendChild(gollum);//puts gollum in mount doom
 
 }
 weWantsIt ();
 
+//Part 12
+var thereAndBackAgain = function () {
+
+var removeRing = document.getElementById("the-ring");//get the element with the ID "the-ring"
+removeRing.remove();//removes that element
+
+var removeGollum = document.getElementById("gollum");//gets the gollum element
+removeGollum.remove();//removes the element
 
 
+var getHobbits = document.getElementsByClassName("hobbit");//gets all the hobbits and makes an array
+var getTheShire = document.getElementsByTagName("ul")[0];// gets the shire UL element
 
+for  (var i = 0; i < getHobbits.length; i++) {//iterates throught the hobbit array we created above
+	getTheShire.appendChild(getHobbits[i]);//appends each li to the the shire UL element
+	}
+
+}
+thereAndBackAgain ();
 
 
 
