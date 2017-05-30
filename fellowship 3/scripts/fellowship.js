@@ -162,6 +162,7 @@ hornOfGondor();
 var mordor = document.getElementsByTagName("article")[2];
 	var mountDoom = document.createElement("div");
 		mordor.setAttribute("id", "Mordor")
+		mountDoom.id = "mount-doom";
 
 
 var itsDangerousToGoAlone = function (){
@@ -183,11 +184,11 @@ itsDangerousToGoAlone();
 
 	var golumn = document.createElement("div");
 	golumn.setAttribute("id", "gollum");
+	mountDoom.appendChild(golumn);
 	golumn.appendChild(theRing);
    // Create a div with an id of `'gollum'` and add it to Mordor
    // Remove `the ring` from `Frodo` and give it to `Gollum`
    // Move Gollum into Mount Doom
-   mountDoom.appendChild(golumn);
 };
 
 weWantsIt();
